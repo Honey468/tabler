@@ -76,20 +76,29 @@ $border-dark-opacity: .24 !default;
 $light: #f4f6fa !default;
 $dark: #232e3c !default;
 
-$body-bg: $light !default;
-$body-color: $dark !default;
+$white: #ffffff !default;
+$black: #000000 !default;
 
-$color-contrast-dark: $dark !default;
+$color-contrast-lightest: mix($light, $white, 50%) !default;
 $color-contrast-light: $light !default;
+$color-contrast-lower: mix($dark, $light, 4%) !default;
+$color-contrast-low: mix($dark, $light, 16%) !default;
+$color-contrast-medium: mix($dark, $light, 64%) !default;
+$color-contrast-high: mix($dark, $light, 84%) !default;
+$color-contrast-higher: mix($dark, $light, 96%) !default;
+$color-contrast-dark: $dark !default;
+$color-contrast-darkest: mix($dark, $black) !default;
+
+$body-bg: $color-contrast-light !default;
+$body-color: $color-contrast-dark !default;
 
 $light-black: rgba($dark, .24) !default;
 $light-mix: rgba(mix($light, $dark, 64%), .24) !default;
 $light-white: rgba($light, .24) !default;
 
-$min-black: rgba($dark, .024) !default;
-$min-white: rgba(mix($light, $dark, 48%), .1) !default;
+$min-black: red !default;
+$min-white: orange !default;
 
-$gray-50: #fbfbfb !default;
 $gray-100: $light !default;
 $gray-200: mix($light, $dark, 98%) !default;
 $gray-300: mix($light, $dark, 94%) !default;
@@ -112,8 +121,6 @@ $lime: #82c91e !default;
 $green: #5eba00 !default;
 $teal: #2bcbba !default;
 $cyan: #17a2b8 !default;
-$black: #000000 !default;
-$white: #ffffff !default;
 
 $text-muted: mix($body-color, #fff, percentage($text-muted-opacity)) !default;
 $text-muted-light: mix($body-color, #fff, percentage($text-muted-light-opacity)) !default;
@@ -350,7 +357,7 @@ $modal-backdrop-blur: 4px !default;
 $modal-fade-transform: translate(0, -1rem) !default;
 
 $modal-content-border-color: transparent !default;
-$modal-content-bg: $gray-50 !default;
+$modal-content-bg: $color-contrast-lightest !default;
 $modal-content-border-radius: $border-radius !default;
 
 $modal-header-padding: 1.5rem !default;
